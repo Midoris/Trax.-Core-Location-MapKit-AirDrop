@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		06963E871C09661700D8A690 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963E861C09661700D8A690 /* AppDelegate.swift */; };
 		06963E8A1C09661700D8A690 /* Trax.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06963E881C09661700D8A690 /* Trax.xcdatamodeld */; };
-		06963E8C1C09661700D8A690 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963E8B1C09661700D8A690 /* ViewController.swift */; };
 		06963E8F1C09661700D8A690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06963E8D1C09661700D8A690 /* Main.storyboard */; };
 		06963E911C09661700D8A690 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06963E901C09661700D8A690 /* Images.xcassets */; };
 		06963E941C09661700D8A690 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06963E921C09661700D8A690 /* LaunchScreen.xib */; };
 		06963EA01C09661700D8A690 /* TraxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963E9F1C09661700D8A690 /* TraxTests.swift */; };
+		06963EDA1C12BBC300D8A690 /* GPXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963ED91C12BBC300D8A690 /* GPXViewController.swift */; };
+		06963EDC1C12BF0100D8A690 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EDB1C12BF0100D8A690 /* GPX.swift */; };
+		06963EDE1C12C33D00D8A690 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EDD1C12C33D00D8A690 /* MKGPX.swift */; };
+		06963EE01C12CF0F00D8A690 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EDF1C12CF0F00D8A690 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +34,16 @@
 		06963E851C09661700D8A690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06963E861C09661700D8A690 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06963E891C09661700D8A690 /* Trax.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trax.xcdatamodel; sourceTree = "<group>"; };
-		06963E8B1C09661700D8A690 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06963E8E1C09661700D8A690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06963E901C09661700D8A690 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06963E931C09661700D8A690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		06963E991C09661700D8A690 /* TraxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06963E9E1C09661700D8A690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06963E9F1C09661700D8A690 /* TraxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraxTests.swift; sourceTree = "<group>"; };
+		06963ED91C12BBC300D8A690 /* GPXViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GPXViewController.swift; path = ../GPXViewController.swift; sourceTree = "<group>"; };
+		06963EDB1C12BF0100D8A690 /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GPX.swift; path = ../GPX.swift; sourceTree = "<group>"; };
+		06963EDD1C12C33D00D8A690 /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MKGPX.swift; path = ../MKGPX.swift; sourceTree = "<group>"; };
+		06963EDF1C12CF0F00D8A690 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				06963E861C09661700D8A690 /* AppDelegate.swift */,
-				06963E8B1C09661700D8A690 /* ViewController.swift */,
+				06963ED91C12BBC300D8A690 /* GPXViewController.swift */,
+				06963EDD1C12C33D00D8A690 /* MKGPX.swift */,
 				06963E8D1C09661700D8A690 /* Main.storyboard */,
 				06963E901C09661700D8A690 /* Images.xcassets */,
 				06963E921C09661700D8A690 /* LaunchScreen.xib */,
@@ -93,6 +100,8 @@
 		06963E841C09661700D8A690 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06963EDF1C12CF0F00D8A690 /* ImageViewController.swift */,
+				06963EDB1C12BF0100D8A690 /* GPX.swift */,
 				06963E851C09661700D8A690 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -215,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06963E8C1C09661700D8A690 /* ViewController.swift in Sources */,
+				06963EDA1C12BBC300D8A690 /* GPXViewController.swift in Sources */,
 				06963E8A1C09661700D8A690 /* Trax.xcdatamodeld in Sources */,
 				06963E871C09661700D8A690 /* AppDelegate.swift in Sources */,
+				06963EDC1C12BF0100D8A690 /* GPX.swift in Sources */,
+				06963EE01C12CF0F00D8A690 /* ImageViewController.swift in Sources */,
+				06963EDE1C12C33D00D8A690 /* MKGPX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
