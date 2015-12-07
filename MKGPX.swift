@@ -8,6 +8,20 @@
 
 import MapKit
 
+class EditableWaypoint: GPX.Waypoint {
+    
+    // make coordinate get & set (for draggable annotations)
+    override var coordinate: CLLocationCoordinate2D {
+        get {
+            return super.coordinate
+        }
+        set {
+            latitude = newValue.latitude
+            longitude = newValue.longitude
+        }
+    }
+}
+
 extension GPX.Waypoint: MKAnnotation {
     
     // MARK: - MKAnnotation
