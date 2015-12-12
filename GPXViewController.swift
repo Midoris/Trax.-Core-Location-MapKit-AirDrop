@@ -53,6 +53,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             let coordinate = mapView.convertPoint(sender.locationInView(mapView), toCoordinateFromView: mapView)
             let waypoint = EditableWaypoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
             waypoint.name = "Dropped"
+//            waypoint.links.append(GPX.Link(href: "http://cs193p.stanford.edu/Images/Panorama.jpg"))
             mapView.addAnnotation(waypoint)
         }
     }
@@ -86,14 +87,20 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     
     func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
         if let waypoint = view.annotation as? GPX.Waypoint {
-            if let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton {
-                let qos = Int(QOS_CLASS_USER_INITIATED.value)
-                let queue = dispatch_get_global_queue(qos, 0)
-                dispatch_async(queue) {
-                    if let imageData = NSData(contentsOfURL: waypoint.thumbnailURL!) {
-                        if let image = UIImage(data: imageData) {
-                            dispatch_async(dispatch_get_main_queue()) {
-                                thumbnailImageButton.setImage(image, forState: .Normal)
+            if let url = waypoint.thumbnailURL {
+                if view.leftCalloutAccessoryView == nil {
+                    // a thumbnail must have been added since the annotation view was created
+                    view.leftCalloutAccessoryView = UIButton(frame: Constants.LeftCalloutFrame)
+                }
+                if let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton {
+                    let qos = Int(QOS_CLASS_USER_INITIATED.value)
+                    let queue = dispatch_get_global_queue(qos, 0)
+                    dispatch_async(queue) {
+                        if let imageData = NSData(contentsOfURL: waypoint.thumbnailURL!) {
+                            if let image = UIImage(data: imageData) {
+                                dispatch_async(dispatch_get_main_queue()) {
+                                    thumbnailImageButton.setImage(image, forState: .Normal)
+                                }
                             }
                         }
                     }
@@ -118,10 +125,11 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Constants.ShowImageSegue {
             if let waypoint = (sender as? MKAnnotationView)?.annotation as? GPX.Waypoint {
-                if let ivc = segue.destinationViewController.contentViewController as? ImageViewController {
+                if let wivc = segue.destinationViewController.contentViewController as? WaypointImageViewController {
+                    wivc.waypoint = waypoint
+                } else if let ivc = segue.destinationViewController.contentViewController as? ImageViewController {
                     ivc.imageURL = waypoint.imageURL
                     ivc.title = waypoint.name
-                    
                 }
             }
         } else if segue.identifier == Constants.EditWaypointSegue {

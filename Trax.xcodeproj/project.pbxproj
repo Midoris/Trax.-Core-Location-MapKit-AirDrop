@@ -18,6 +18,8 @@
 		06963EDE1C12C33D00D8A690 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EDD1C12C33D00D8A690 /* MKGPX.swift */; };
 		06963EE01C12CF0F00D8A690 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EDF1C12CF0F00D8A690 /* ImageViewController.swift */; };
 		06963EE21C1419B900D8A690 /* EditWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EE11C1419B900D8A690 /* EditWaypointViewController.swift */; };
+		06963EEA1C1C043200D8A690 /* WaypointImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EE91C1C043200D8A690 /* WaypointImageViewController.swift */; };
+		06963EEC1C1C065100D8A690 /* SimpleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06963EEB1C1C065100D8A690 /* SimpleMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		06963EDD1C12C33D00D8A690 /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MKGPX.swift; path = ../MKGPX.swift; sourceTree = "<group>"; };
 		06963EDF1C12CF0F00D8A690 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		06963EE11C1419B900D8A690 /* EditWaypointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditWaypointViewController.swift; path = ../EditWaypointViewController.swift; sourceTree = "<group>"; };
+		06963EE91C1C043200D8A690 /* WaypointImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaypointImageViewController.swift; path = ../WaypointImageViewController.swift; sourceTree = "<group>"; };
+		06963EEB1C1C065100D8A690 /* SimpleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleMapViewController.swift; path = ../SimpleMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				06963ED91C12BBC300D8A690 /* GPXViewController.swift */,
 				06963EDD1C12C33D00D8A690 /* MKGPX.swift */,
 				06963EE11C1419B900D8A690 /* EditWaypointViewController.swift */,
+				06963EE91C1C043200D8A690 /* WaypointImageViewController.swift */,
+				06963EEB1C1C065100D8A690 /* SimpleMapViewController.swift */,
 				06963E8D1C09661700D8A690 /* Main.storyboard */,
 				06963E901C09661700D8A690 /* Images.xcassets */,
 				06963E921C09661700D8A690 /* LaunchScreen.xib */,
@@ -230,8 +236,10 @@
 				06963EDA1C12BBC300D8A690 /* GPXViewController.swift in Sources */,
 				06963E8A1C09661700D8A690 /* Trax.xcdatamodeld in Sources */,
 				06963EE21C1419B900D8A690 /* EditWaypointViewController.swift in Sources */,
+				06963EEA1C1C043200D8A690 /* WaypointImageViewController.swift in Sources */,
 				06963E871C09661700D8A690 /* AppDelegate.swift in Sources */,
 				06963EDC1C12BF0100D8A690 /* GPX.swift in Sources */,
+				06963EEC1C1C065100D8A690 /* SimpleMapViewController.swift in Sources */,
 				06963EE01C12CF0F00D8A690 /* ImageViewController.swift in Sources */,
 				06963EDE1C12C33D00D8A690 /* MKGPX.swift in Sources */,
 			);
